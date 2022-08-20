@@ -1,6 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&family=Silkscreen&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --hero-name-length: 8;
+  --hero-name-duration: 1.5s;
+  --hero-name-delay: 400ms;
+  --hero-name-blink-remove-duration: 1.5s;
+  --hero-name-blink-remove-delay: 400ms; 
+  --hero-title-length: 18;
+  --hero-title-duration: 2s;
+  --hero-title-delay: 2.5s;
+  --hero-title-blink-remove-duration: 2s;
+  --hero-title-blink-remove-delay: 2.5s; 
+  --blink-speed: 600ms;
+  --blink-title-delay: 2.5s;
+  --hero-img-duration:1s;
+  --hero-img-delay:4.7s;
+  --hero-img-float-duration: 5s;
+  --hero-img-float-delay: 6s;
+}
 
 body {
   margin: 0;
@@ -12,4 +33,137 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Hero section animations */
+
+.hero-name::before,
+.hero-name::after,
+.hero-title::before,
+.hero-title::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.hero-name::before {
+  background-color: #a5b4fc;
+  animation: typewrite var(--hero-name-duration) steps(var(--hero-name-length)) var(--hero-name-delay) forwards;
+}
+
+.hero-name::after {
+  width: 0.25rem;
+  background-color: #1f2937;
+  animation: typewrite var(--hero-name-duration) steps(var(--hero-name-length)) var(--hero-name-delay) forwards, blink var(--blink-speed) steps(var(--hero-name-length)) infinite, blink-remove var(--hero-name-blink-remove-duration) steps(var(--hero-name-length)) var(--hero-name-blink-remove-delay) forwards;
+}
+
+.hero-title::before {
+  background-color: #a5b4fc;
+  animation: typewrite var(--hero-title-duration) steps(var(--hero-title-length)) var(--hero-title-delay) forwards;
+}
+
+.hero-title::after {
+  animation: typewrite var(--hero-title-duration) steps(var(--hero-title-length)) var(--hero-title-delay) forwards, blink var(--blink-speed) steps(var(--hero-title-length)) var(--blink-title-delay) infinite, blink-remove var(--hero-title-blink-remove-duration) steps(var(--hero-title-length)) var(--hero-title-blink-remove-delay) forwards;
+}
+
+@keyframes typewrite {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+
+@keyframes blink-remove {
+  0% {
+    width: 0.25rem;
+    background-color: #1f2937;
+  }  
+  99% {
+    width: 0.25rem;
+  }
+  100% {
+    width: 0;
+    background: transparent;
+  }
+}
+
+#hero-img-upper {
+  animation: hero-img-slide var(--hero-img-duration) ease-in-out var(--hero-img-delay) forwards, hero-img-float-upper var(--hero-img-float-duration) linear var(--hero-img-float-delay) infinite;
+}
+
+#hero-img-mid {
+  animation: hero-img-slide var(--hero-img-duration) ease-in-out var(--hero-img-delay) forwards, hero-img-float var(--hero-img-float-duration) linear var(--hero-img-float-delay) infinite;
+}
+
+#hero-img-lower {
+  animation: hero-img-slide var(--hero-img-duration) ease-in-out var(--hero-img-delay) forwards, hero-img-float-lower var(--hero-img-float-duration) linear var(--hero-img-float-delay) infinite;
+}
+
+@keyframes hero-img-slide {
+  to {
+    margin-left: 0;
+    margin-right: 0;
+  }  
+}
+
+@keyframes hero-img-float {
+  from {
+    object-position: 50% calc(50%);
+  }
+  25% {
+    object-position: 50% calc(50% + 80px);
+  }
+  50%{
+    object-position: 50% calc(50%);
+  }
+  75% {
+    object-position: 50% calc(50% - 80px);
+  }
+  to {
+    object-position: 50% calc(50%);
+  }  
+}
+
+@keyframes hero-img-float-upper {
+  from {
+    object-position: 50% calc(50% + 80px);
+  }
+  25% {
+    object-position: 50% calc(50% + 160px);
+  }
+  50%{
+    object-position: 50% calc(50% + 80px);
+  }
+  75% {
+    object-position: 50% calc(50%);
+  }
+  to {
+    object-position: 50% calc(50% + 80px);
+  }  
+}
+
+@keyframes hero-img-float-lower {
+  from {
+    object-position: 50% calc(50% - 80px);
+  }
+  25% {
+    object-position: 50% calc(50%);
+  }
+  50%{
+    object-position: 50% calc(50% - 80px);
+  }
+  75% {
+    object-position: 50% calc(50% - 160px);
+  }
+  to {
+    object-position: 50% calc(50% - 80px);
+  }  
 }
