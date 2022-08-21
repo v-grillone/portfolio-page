@@ -17,6 +17,10 @@ module.exports = {
         'poppins': ["Poppins", "sans-serif"],
         'silkscreen' : ['Silkscreen', 'monospace']
       },
+      backgroundImage:
+         {
+           'reach-out-waves': "url(/src/assets/layered-waves-haikei.svg)"
+         }
     },
   },
   plugins: [],
