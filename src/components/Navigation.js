@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import BtnMain from './BtnMain'
 
-const Navigation = () => {
+const Navigation = ({ menuActive }) => {
 
   const [dropdownActive, setDropdownActive] = useState(false);
 
@@ -26,11 +26,11 @@ const Navigation = () => {
         shadow md:hidden'>
         </span>
         <ul id='menu-list' className={`md:flex md:items-center z-[1] md:z-[4] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 ${dropdownActive ? 'top-[100%] opacity-100': '-top-96 opacity-0'} transition-all ease-in duration-500`}>
-            <li className='mx-4 my-6 md:py-0'><a className='text-xl font-poppins hover:text-indigo-600 duration-200' href={'#'}>About Me</a></li>
-            <li className='mx-4 my-6 md:my-0'><a className='text-xl font-poppins hover:text-indigo-600 duration-200' href={'#'}>Project 1</a></li>
-            <li className='mx-4 my-6 md:my-0'><a className='text-xl font-poppins hover:text-indigo-600 duration-200' href={'#'}>Project 2</a></li>
-            <li className='mx-4 my-6 md:my-0'><a className='text-xl font-poppins hover:text-indigo-600 duration-200' href={'#'}>Project 3</a></li>
-            <li className='mx-4 my-6 md:my-0'><a className='text-xl font-poppins hover:text-indigo-600 duration-200' href={'#'}>Reach Out</a></li>
+            <li className={`mx-4 my-6 md:py-0 ${menuActive.about ? 'border-b-2 border-indigo-300' : ''}`}><a className='text-xl font-poppins hover:text-indigo-600 duration-200' href={'#'}>About Me</a></li>
+            <li className={`mx-4 my-6 md:py-0 ${menuActive.project1 ? 'border-b-2 border-indigo-300' : ''}`}><a className='text-xl font-poppins hover:text-indigo-600 duration-200' href={'#'}>Project 1</a></li>
+            <li className={`mx-4 my-6 md:py-0 ${menuActive.project2 ? 'border-b-2 border-indigo-300' : ''}`}><a className='text-xl font-poppins hover:text-indigo-600 duration-200' href={'#'}>Project 2</a></li>
+            <li className={`mx-4 my-6 md:py-0 ${menuActive.project3 ? 'border-b-2 border-indigo-300' : ''}`}><a className='text-xl font-poppins hover:text-indigo-600 duration-200' href={'#'}>Project 3</a></li>
+            <li className={`mx-4 my-6 md:py-0 ${menuActive.reachOut ? 'border-b-2 border-indigo-300' : ''}`}><a className='text-xl font-poppins hover:text-indigo-600 duration-200' href={'#'}>Reach Out</a></li>
             <BtnMain text='Resume' />
         </ul>
     </nav>
