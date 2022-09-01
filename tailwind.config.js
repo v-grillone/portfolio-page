@@ -19,8 +19,9 @@ module.exports = {
       },
       backgroundImage:
          {
-           'reach-out-waves': "url(/src/assets/layered-waves-haikei.svg)"
-         }
+           'reach-out-waves': "url(/src/assets/layered-waves-haikei.svg)",
+           'next-arrow': "url(/src/assets/next-arrow.svg)"
+         },
     },
   },
   plugins: [],
