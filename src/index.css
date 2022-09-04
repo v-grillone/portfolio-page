@@ -175,27 +175,23 @@ code {
 /* Technologies icons animation */
 
 .white-slide-1 {
-  animation: white-slide var(--tech-icon-duration) ease-in-out calc(var(--tech-icon-delay) + 2.5s) backwards;
+  animation: white-slide var(--tech-icon-duration) ease-in-out calc(var(--tech-icon-delay) + 1s) backwards;
 }
 
 .white-slide-2 {
-  animation: white-slide var(--tech-icon-duration) ease-in-out calc(var(--tech-icon-delay) + 3s) backwards;
+  animation: white-slide var(--tech-icon-duration) ease-in-out calc(var(--tech-icon-delay) + 1.5s) backwards;
 }
 
 .white-slide-3 {
-  animation: white-slide var(--tech-icon-duration) ease-in-out calc(var(--tech-icon-delay) + 3.5s) backwards;
+  animation: white-slide var(--tech-icon-duration) ease-in-out calc(var(--tech-icon-delay) + 2s) backwards;
 }
 
 .white-slide-4 {
-  animation: white-slide var(--tech-icon-duration) ease-in-out calc(var(--tech-icon-delay) + 4s) backwards;
-}
-
-.white-slide-final {
-  animation: white-slide calc(var(--tech-icon-duration) + 0.25s) ease-in-out calc(var(--tech-icon-delay) + 4.5s) backwards;
+  animation: white-slide var(--tech-icon-duration) ease-in-out calc(var(--tech-icon-delay) + 2.5s) backwards;
 }
 
 .tech-icons-compress {
-  animation: tech-icons-compress calc(var(--tech-icon-duration) + 2s) ease-in-out calc(var(--tech-icon-delay)) backwards;
+  animation: tech-icons-grow calc(var(--tech-icon-duration) + 0.5s) ease-in-out calc(var(--tech-icon-delay) - 0.5s) forwards;
 }
 
 
@@ -211,11 +207,20 @@ code {
   }  
 }
 
-@keyframes tech-icons-compress {
-  50% {
-    width: 50vw;
-  }
-  100% {
+@keyframes tech-icons-grow {
+  to {
     width: 70vw;
   }
+}
+
+/* hobbies arrow animation */
+
+.hobby-arrow-slide {
+  animation: hobby-arrow-slide 0.5s ease-out 0s backwards;
+}
+
+@keyframes hobby-arrow-slide {
+  to {
+    transform: translateX(0%);
+  }  
 }
