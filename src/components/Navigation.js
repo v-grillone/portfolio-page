@@ -10,7 +10,7 @@ const Navigation = ({ menuActive }) => {
   }
 
   return (
-    <nav className='h-15vh p-8 fixed w-[100vw] bg-white md:p-5 md:flex md:items-center md: justify-between'>
+    <nav className='h-15vh p-8 fixed w-[100vw] bg-white md:p-5 md:flex md:items-center md: justify-between z-[1]'>
         <div className='flex flex-row items-center justify-between relative z-[3]'>
             <span className='flex flex-row items-center space-x-1 md:space-x-2 cursor-pointer '>
               <i className="fa-solid fa-code text-sm md:text-lg "></i>
