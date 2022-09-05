@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState } from 'react'
-import BtnMain from './BtnMain'
 
 const Navigation = ({ menuActive }) => {
 
@@ -25,13 +24,13 @@ const Navigation = ({ menuActive }) => {
         <span className='absolute z-[2] bg-white w-screen h-15vh top-0 left-0
         shadow md:hidden'>
         </span>
-        <ul id='menu-list' className={`md:flex md:items-center z-[1] md:z-[4] md:z-auto md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 ${dropdownActive ? 'top-[100%] opacity-100': '-top-96 opacity-0'} transition-all ease-in duration-500`}>
-            <li className={`mx-4 my-6 md:py-0 ${menuActive.about ? 'border-b-2 border-indigo-300' : ''}`}><a className='text-xl font-poppins hover:text-indigo-600 duration-200' href={'#'}>About Me</a></li>
-            <li className={`mx-4 my-6 md:py-0 ${menuActive.project1 ? 'border-b-2 border-indigo-300' : ''}`}><a className='text-xl font-poppins hover:text-indigo-600 duration-200' href={'#'}>Project 1</a></li>
-            <li className={`mx-4 my-6 md:py-0 ${menuActive.project2 ? 'border-b-2 border-indigo-300' : ''}`}><a className='text-xl font-poppins hover:text-indigo-600 duration-200' href={'#'}>Project 2</a></li>
-            <li className={`mx-4 my-6 md:py-0 ${menuActive.project3 ? 'border-b-2 border-indigo-300' : ''}`}><a className='text-xl font-poppins hover:text-indigo-600 duration-200' href={'#'}>Project 3</a></li>
-            <li className={`mx-4 my-6 md:py-0 ${menuActive.reachOut ? 'border-b-2 border-indigo-300' : ''}`}><a className='text-xl font-poppins hover:text-indigo-600 duration-200' href={'#'}>Reach Out</a></li>
-            <BtnMain text='Resume' />
+        <ul id='menu-list' className={`md:flex md:items-center z-[1] md:z-[4] md:static absolute bg-white w-full md:h-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 ${dropdownActive ? 'top-[100%] opacity-100': '-top-96 opacity-0'} transition-all ease-in duration-500`}>
+            <li className={`mx-4 my-6 md:py-0 ${menuActive.about ? 'md:border-b-2 md:border-indigo-300' : ''}`}><a className='text-xl font-poppins hover:text-indigo-600 duration-200' href={'#about-section'}>About Me</a></li>
+            <li className={`mx-4 my-6 md:py-0 ${menuActive.project1 ? 'md:border-b-2 md:border-indigo-300' : ''}`}><a className='text-xl font-poppins hover:text-indigo-600 duration-200' href={'#project1-section'}>Project 1</a></li>
+            <li className={`mx-4 my-6 md:py-0 ${menuActive.project2 ? 'md:border-b-2 md:border-indigo-300' : ''}`}><a className='text-xl font-poppins hover:text-indigo-600 duration-200' href={'#project2-section'}>Project 2</a></li>
+            <li className={`mx-4 my-6 md:py-0 ${menuActive.project3 ? 'md:border-b-2 md:border-indigo-300' : ''}`}><a className='text-xl font-poppins hover:text-indigo-600 duration-200' href={'#project3-section'}>Project 3</a></li>
+            <li className={`mx-4 my-6 md:py-0 ${menuActive.reachOut ? 'md:border-b-2 md:border-indigo-300' : ''}`}><a className='text-xl font-poppins hover:text-indigo-600 duration-200' href={'#reach-out-section'}>Reach Out</a></li>
+            <a href="path-to-file" download={`proposed-file-name`} className='bg-indigo-600 rounded text-white font-poppins hover:bg-indigo-500 duration-200 mx-4 px-6 py-2'>Resume</a>
         </ul>
     </nav>
   )

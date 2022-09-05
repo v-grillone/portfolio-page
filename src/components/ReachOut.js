@@ -2,7 +2,7 @@ import React from 'react'
 
 const ReachOut = ({ reachOutRef }) => {
   return (
-    <div ref={reachOutRef} className='reach-out-section bg-indigo-700 px-8 pb-8 flex flex-col items-center'>
+    <div ref={reachOutRef} id="reach-out-section" className='reach-out-section bg-indigo-700 px-8 pb-8 flex flex-col items-center overflow-hidden'>
       <div className="reach-out-section-waves aspect-[900/300] w-[100vw] bg-no-repeat bg-center bg-cover bg-reach-out-waves"></div>
       <div className='form-container w-[75vw] md:w-[50vw] p-5 md:p-10 mt-[-15%]  bg-white rounded-md border-2 border-gray-600 shadow'>
         <div className="form-title-container text-center mb-4 md:mb-8">
