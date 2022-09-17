@@ -6,6 +6,7 @@ import Navigation from "./components/Navigation";
 import Project1 from "./components/Project1";
 import Project2 from "./components/Project2";
 import Project3 from "./components/Project3";
+import Projects from "./components/Projects";
 import ReachOut from "./components/ReachOut";
 
 function App() {
@@ -65,6 +66,7 @@ function App() {
       <Navigation menuActive={isMenuActive} />
       <HeroSection />
       <AboutSection aboutRef={aboutSectionRef} />
+      {/* < Projects project1Ref={project1SectionRef} project2Ref={project2SectionRef} project3Ref={project3SectionRef} /> */}
       <Project1 project1Ref={project1SectionRef}  />
       <Project2 project2Ref={project2SectionRef} />
       <Project3 project3Ref={project3SectionRef} />
