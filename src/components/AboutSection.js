@@ -62,7 +62,7 @@ const AboutSection = ({ aboutRef }) => {
       <div className="hobbies-section flex flex-col space-y-6 items-center">
         <h5 className='md:text-4xl text-xl font-poppins uppercase tracking-wider'>Interests & Hobbies</h5>
         <div className="hobbies-icons-container flex flex-row w-72 justify-between items-center">
-          <HobbyArrow direction={'left'} changeHobby={changeHobby} clickHobbyArrow={clickHobbyArrow} setClickHobbyArrow={setClickHobbyArrow}/>
+          <HobbyArrow direction={'left'} changeHobby={changeHobby} clickHobbyArrow={clickHobbyArrow} setClickHobbyArrow={setClickHobbyArrow} iconPosition={hobbiesIconPosition} />
           <ul className='hobbies-icons-list flex flex-row list-none relative'>
             <li className={`absolute top-1/2 ${hobbiesIconPosition.icon1} transform -translate-x-1/2 -translate-y-1/2 `}>
               <div id="icon1" className={`${hobbiesIconPosition.icon1 === 'left-[50%]' ? 'opacity-1' : 'opacity-0'} flex flex-col items-center`}>
@@ -95,7 +95,7 @@ const AboutSection = ({ aboutRef }) => {
               </div>
             </li>
           </ul>
-          <HobbyArrow direction={'right'} changeHobby={changeHobby} clickHobbyArrow={clickHobbyArrow} setClickHobbyArrow={setClickHobbyArrow}/>
+          <HobbyArrow direction={'right'} changeHobby={changeHobby} clickHobbyArrow={clickHobbyArrow} setClickHobbyArrow={setClickHobbyArrow} iconPosition={hobbiesIconPosition} />
         </div>
       </div>
     </div>
