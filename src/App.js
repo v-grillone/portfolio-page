@@ -66,7 +66,6 @@ function App() {
       <Navigation menuActive={isMenuActive} />
       <HeroSection />
       <AboutSection aboutRef={aboutSectionRef} />
-      {/* < Projects project1Ref={project1SectionRef} project2Ref={project2SectionRef} project3Ref={project3SectionRef} /> */}
       <Project1 project1Ref={project1SectionRef}  />
       <Project2 project2Ref={project2SectionRef} />
       <Project3 project3Ref={project3SectionRef} />

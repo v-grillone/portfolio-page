@@ -30,7 +30,7 @@ const Navigation = ({ menuActive }) => {
             <li className={`mx-4 my-6 md:py-0 ${menuActive.project2 ? 'md:border-b-2 md:border-indigo-300' : ''}`}><a className='text-xl font-poppins hover:text-indigo-600 duration-200' href={'#project2-section'}>Project 2</a></li>
             <li className={`mx-4 my-6 md:py-0 ${menuActive.project3 ? 'md:border-b-2 md:border-indigo-300' : ''}`}><a className='text-xl font-poppins hover:text-indigo-600 duration-200' href={'#project3-section'}>Project 3</a></li>
             <li className={`mx-4 my-6 md:py-0 ${menuActive.reachOut ? 'md:border-b-2 md:border-indigo-300' : ''}`}><a className='text-xl font-poppins hover:text-indigo-600 duration-200' href={'#reach-out-section'}>Reach Out</a></li>
-            <a href="path-to-file" download={`proposed-file-name`} className='bg-indigo-600 rounded text-white font-poppins hover:bg-indigo-500 duration-200 mx-4 px-6 py-2'>Resume</a>
+            <a href={require('../assets/front-end-resume.pdf')} download='vincenzo-grillone-resume.pdf' className='bg-indigo-600 rounded text-white font-poppins hover:bg-indigo-500 duration-200 mx-4 px-6 py-2'>Resume</a>
         </ul>
     </nav>
   )
