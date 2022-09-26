@@ -18,7 +18,7 @@ const Project3 = ({ project3Ref }) => {
         </div>
         <div className="project-description-container flex flex-col md:w-[25%] items-center justify-evenly h-full ">
           <div className='project-text-container text-sm md:text-base px-6'>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis p</p>
+            <p>The Todo list app created using react is a classic to-do list service that allows the user to create tasks, group the tasks, and delete the tasks once completed.</p>
           </div>
           <div className='project-techs-container w-full px-6 flex flex-row items-center justify-center space-x-2'>
             <img className='w-8' src={reactSvg} alt="" />

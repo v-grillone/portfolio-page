@@ -8,7 +8,7 @@ const ReachOut = ({ reachOutRef }) => {
         <div className="form-title-container text-center mb-4 md:mb-8">
           <p className='text-3xl md:text-5xl font-bold bg-gradient-to-r from-indigo-100 via-indigo-400 to-indigo-700 bg-clip-text text-transparent font-poppins'>REACH OUT</p>           
         </div>
-        <form action="" method='POST'>
+        <form action="https://formsubmit.co/579662fd7b0735a85875305b9a975c0d" method='POST'>
           <div className='form-name-container mb-6'>
             <label htmlFor="name" className='block mb-2 text-sm text-gray-600 font-poppins'>Full Name</label>
             <input type="text" name='name' placeholder='Bob Smith' required className='w-full px-3 py-2 palceholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 font-poppins' />
@@ -19,7 +19,7 @@ const ReachOut = ({ reachOutRef }) => {
           </div>
           <div className='form-company-container mb-6'>
             <label htmlFor="company" className='block mb-2 text-sm text-gray-600 font-poppins'>Company (if applicable)</label>
-            <input type="text" name='name' placeholder='Google' required className='w-full px-3 py-2 palceholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 font-poppins' />
+            <input type="text" name='name' placeholder='Google' className='w-full px-3 py-2 palceholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 font-poppins' />
           </div>
           <div className="form-message-container mb-6">
             <label htmlFor="message" className='block mb-2 text-sm text-gray-600 font-poppins'>Your Message</label>

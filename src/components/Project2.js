@@ -18,7 +18,7 @@ const Project2 = ({ project2Ref }) => {
         </div>
         <div className="project-description-container flex flex-col md:w-[25%] items-center justify-evenly h-full ">
           <div className='project-text-container text-sm md:text-base px-6'>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis p</p>
+            <p>Weather App is an application using a global weather API allowing the user to input a city name and return the current temperature, wind speeds, and a 7-day forecast for that city.</p>
           </div>
           <div className='project-techs-container w-full px-6 flex flex-row items-center justify-center space-x-2'>
             <img className='w-8' src={reactSvg} alt="" />
